@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import altair as alt
-from streamlit_plotly_events import plotly_events
+#from streamlit_plotly_events import plotly_events
 
 #alt.theme.enable("dark")
 alt.theme.enable("ggplot2")# estilo ggplot2
@@ -495,4 +495,5 @@ fig_heat.update_layout(
 with colD:
     with st.container(border=True, height=450):
         st.plotly_chart(fig_heat, width='stretch')
+
 
