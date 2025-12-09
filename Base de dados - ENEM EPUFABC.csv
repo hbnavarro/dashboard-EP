@@ -102,21 +102,46 @@ Ano,Número (Cinza),Frente,Tópico,Subtópico 1,Subtópico 2,Tipo
 2019,127,Óptica,Óptica Geométrica,Princípios de propagação da luz,,Conceitual
 2019,128,Mecânica,Energia,Conservação da energia mecânica,,Conta
 2019,131,Termofísica,Termologia,Transferência de Calor,,Conceitual
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
-2018,,,,,,
+2018,92,Mecânica,Hidrostática,Densidade e Pressão,,Conta
+2018,97,Eletromagnetismo,Magnetismo,Indução e Força Eletromotriz,,Conceitual
+2018,103,Mecânica,Cinemática,Velocidade Média,Equação Fundamental da Ondulatória,Conta
+2018,104,Mecânica,Estática,Equilíbrio de corpo extenso,,Conta
+2018,108,Eletromagnetismo,Eletrodinâmica,Primeira Lei de Ohm,,Conta
+2018,112,Eletromagnetismo,Eletrodinâmica,Análise de Circuitos,,Conta
+2018,115,Eletromagnetismo,Eletrodinâmica,Potência,,Conta
+2018,120,Ondulatória,Ondas,Fenômenos Ondulatórios,Acústica,Conceitual
+2018,122,Mecânica,Dinâmica,Centro de Massa,Movimento Circular Uniforme (MCU),Conceitual
+2018,123,Mecânica,Energia,Energia e conversões,,Conceitual
+2018,125,Óptica,Óptica Geométrica,Refração,Espectro Eletromagnético,Conceitual
+2018,128,Mecânica,Dinâmica,Impulso e Quantidade de Movimento,,Conceitual
+2018,129,Óptica,Óptica da visão,Olho Humano,Espectro Eletromagnético,Conceitual
+2018,131,Mecânica,Energia,Conservação da energia mecânica,,Conta
+2018,134,Mecânica,Hidrostática,Densidade e Pressão,,Conceitual
+2017,91,Mecânica,Cinemática,Movimento Retilíneo Uniformemente Variado (MUV),,Conta
+2017,93,Eletromagnetismo,Magnetismo,Indução e Força Eletromotriz,,Conceitual
+2017,96,Eletromagnetismo,Eletrodinâmica,Geradores e Receptores,Primeira Lei de Ohm,Conta
+2017,100,Termofísica,Termologia,Calorimetria,,Conta
+2017,105,Eletromagnetismo,Eletrodinâmica,Análise de Circuitos,Primeira Lei de Ohm,Conta
+2017,107,Ondulatória,Ondas,Equação Fundamental da Ondulatória,Fenômenos Ondulatórios,Conta
+2017,118,Eletromagnetismo,Eletrodinâmica,Primeira Lei de Ohm,,Conta
+2017,121,Ondulatória,Ondas,Equação Fundamental da Ondulatória,,Conceitual
+2017,122,Mecânica,Energia,Conservação da energia mecânica,,Conta
+2017,123,Ondulatória,Ondas,Espectro Eletromagnético,,Conceitual
+2017,125,Ondulatória,Acústica,Estudo do Som,,Conta
+2017,127,Mecânica,Energia,Energia e conversões,,Conceitual
+2017,130,Mecânica,Hidrostática,Densidade e Pressão,,Conceitual
+2017,134,Mecânica,Dinâmica,Leis de Newton,,Conceitual
+2016,47,Eletromagnetismo,Magnetismo,Ímã e campo magnético,Transferência de Calor,Conceitual
+2016,51,Ondulatória,Acústica,Ondas Estacionárias,,Conceitual
+2016,53,Mecânica,Dinâmica,Tração e Polias,Força de Atrito,Conta
+2016,55,Termofísica,Termologia,Calorimetria,Transferência de Calor,Conceitual
+2016,58,Mecânica,Dinâmica,Colisões,,Conta
+2016,67,Eletromagnetismo,Eletrodinâmica,Análise de Circuitos,,Conceitual
+2016,68,Eletromagnetismo,Eletrodinâmica,Análise de Circuitos,Primeira Lei de Ohm,Conta
+2016,74,Mecânica,Cinemática,Movimento Circular Uniforme (MCU),,Conta
+2016,77,Mecânica,Cinemática,Movimento Retilíneo Uniforme (MRU),Movimento Retilíneo Uniformemente Variado (MUV),Conceitual
+2016,79,Ondulatória,Acústica,Efeito Doppler,,Conceitual
+2016,82,Termofísica,Termologia,Calorimetria,,Conta
+2016,83,Ondulatória,Acústica,Estudo do Som,,Conceitual
+2016,86,Ondulatória,Acústica,Efeito Doppler,,Conceitual
+2016,89,Mecânica,Energia,Conservação da energia mecânica,,Conta
