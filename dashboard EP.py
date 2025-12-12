@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import altair as alt
-#from streamlit_plotly_events import plotly_events
+from streamlit_plotly_events import plotly_events
 
 #alt.theme.enable("dark")
 alt.theme.enable("ggplot2")# estilo ggplot2
@@ -35,24 +35,40 @@ if ano_inicio > ano_fim:
 df_filtered = df[(df["Ano"] >= ano_inicio) & (df["Ano"] <= ano_fim)]
 
 # ==============================================================================
-# 2. SEÇÃO DE KPIS (RESUMO EXECUTIVO)
+# 2. SEÇÃO DE KPIS (RESUMO EXECUTIVO - PORCENTAGENS + TOTAL)
 # ==============================================================================
-# Cálculos simples para o topo do dashboard
-total_questoes = df_filtered.shape[0]
-frente_top = df_filtered["Frente"].value_counts().idxmax() if not df_filtered.empty else "-"
-qtd_frentes = df_filtered["Frente"].nunique()
-media_anual = total_questoes / len(range(ano_inicio, ano_fim + 1))
 
-# Container visual para os KPIs
+# 1. Totalizador
+total_questoes = df_filtered.shape[0]
+
+if total_questoes > 0:
+    # --- Cálculo Mecânica ---
+    qtd_mec = df_filtered[df_filtered["Frente"] == "Mecânica"].shape[0]
+    pct_mec = (qtd_mec / total_questoes) * 100
+
+    # --- Cálculo Eletromagnetismo ---
+    qtd_eletro = df_filtered[df_filtered["Frente"] == "Eletromagnetismo"].shape[0]
+    pct_eletro = (qtd_eletro / total_questoes) * 100
+
+    # --- Cálculo Combo (Termo + Ondulatória + Óptica) ---
+    grupo_fisica_classica = ["Termofísica", "Ondulatória", "Óptica"]
+    qtd_combo = df_filtered[df_filtered["Frente"].isin(grupo_fisica_classica)].shape[0]
+    pct_combo = (qtd_combo / total_questoes) * 100
+else:
+    pct_mec = pct_eletro = pct_combo = 0.0
+
+# 2. Visualização (Container com 4 colunas)
 with st.container(border=True):
     col_kpi1, col_kpi2, col_kpi3, col_kpi4 = st.columns(4)
     
-    col_kpi1.metric("Total de Questões", f"{total_questoes}")
-    col_kpi2.metric("Frente Mais Cobrada", f"{frente_top}")
-    col_kpi3.metric("Média Questões/Ano", f"{media_anual:.1f}")
-    col_kpi4.metric("Frentes Abordadas", f"{qtd_frentes}")
+    col_kpi1.metric("Mecânica", f"{pct_mec:.1f}%")
+    col_kpi2.metric("Eletromagnetismo", f"{pct_eletro:.1f}%")
+    col_kpi3.metric("Termo / Ondul. / Óptica", f"{pct_combo:.1f}%")
+    
+    # Coluna nova
+    col_kpi4.metric("Total de Questões", f"{total_questoes}")
 
-st.markdown("---") # Linha divisória elegante
+st.markdown("---")
 
 
 st.markdown("## 🌎 Visão Geral")
@@ -495,5 +511,4 @@ fig_heat.update_layout(
 with colD:
     with st.container(border=True, height=450):
         st.plotly_chart(fig_heat, width='stretch')
-
 
